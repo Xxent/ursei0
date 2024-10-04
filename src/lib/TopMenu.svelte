@@ -5,7 +5,6 @@
         {label: "Menu item 1" },
         {label: "Menu item 2" },
         {label: "Menu item 3" },
-        {label: "Menu item 4" },
         // Add more items here...
     ];
 </script>

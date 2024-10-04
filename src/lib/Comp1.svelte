@@ -3,6 +3,7 @@
 </script>
 
 <div class='wrapper'>
+   <!-- в wrapper добавляем текст Component 1 -->
 <h1>
   Component 1
 </h1>
