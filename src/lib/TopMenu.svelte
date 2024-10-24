@@ -1,10 +1,13 @@
 <script>
     let selectedIndex = 0;
+    let isPressed = false;
     export let selectcomp;
     let menuItems = [
-        {label: "Menu item 1" },
-        {label: "Menu item 2" },
-        {label: "Menu item 3" },
+        {label: "Страница 1" },
+        {label: "Страница 2" },
+        {label: "Страница 3" },
+        {label: "Страница 4" },
+        {label: "Страница 5" },
         // Add more items here...
     ];
 </script>
@@ -15,7 +18,10 @@
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <div
             class:selected={selectedIndex === i}
-            on:click={() => {
+            class:pressed={isPressed && selectedIndex === i}
+            on:mousedown={() => isPressed = true}
+            on:mouseup={() => {
+                isPressed = false;
                 selectcomp(i);
                 selectedIndex = i;
             }}
@@ -39,6 +45,11 @@
 
     .selected {
         background-color: #ccc; /* add your desired styles here */
+        color: #333;
+    }
+
+    .pressed {
+        background-color: #aaa; /* add your desired styles here */
         color: #333;
     }
 </style>
